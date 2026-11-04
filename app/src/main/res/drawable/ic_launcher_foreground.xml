@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- rocket body -->
+    <path
+        android:fillColor="#fdbb2d"
+        android:pathData="M54,30c8,5.3 12,14.7 12,25.3l-6.7,8H48.7L42,55.3C42,44.7 46,35.3 54,30z" />
+    <!-- window -->
+    <path
+        android:fillColor="#1a2a6c"
+        android:pathData="M54,45.5m-4.5,0a4.5,4.5 0,1 1,9 0a4.5,4.5 0,1 1,-9 0" />
+    <!-- fins -->
+    <path
+        android:fillColor="#b21f1f"
+        android:pathData="M48.7,63.3l-4,12 9.3,-6.7 9.3,6.7 -4,-12z" />
+    <!-- flame -->
+    <path
+        android:fillColor="#e74c3c"
+        android:pathData="M51,77c0,4 3,6.7 3,6.7s3,-2.7 3,-6.7z" />
+</vector>
