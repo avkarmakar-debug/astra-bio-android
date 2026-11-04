@@ -20,16 +20,18 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.10
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
       - name: Accept Android SDK Licenses
         run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
-      - name: Grant execute permission for gradle
-        run: (bash generate-wrapper.sh || gradle wrapper) && chmod +x gradlew
+      - name: Configure Python 3.10 and Gradle Wrapper
+        run: |
+          sed -i 's/3.11/3.10/g' app/build.gradle*
+          (bash generate-wrapper.sh || gradle wrapper) && chmod +x gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace
